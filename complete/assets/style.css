@@ -93,10 +93,10 @@ html, body {
     letter-spacing: 3px;
 }
 
-/* Grid: 5 x 6 */
+/* Grid: 5 x 3 */
 .teams-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     grid-template-rows: repeat(5, auto);   /* 5 rows */
     gap: 30px;                              /* equal spacing */
 }
@@ -110,7 +110,7 @@ html, body {
     display: flex;
     align-items: center;
     gap: 15px;
-
+    position: relative;
     box-shadow: 0 6px 18px rgba(0,0,0,0.6);
     transition: transform 0.25s ease;
 }
@@ -133,3 +133,74 @@ html, body {
     letter-spacing: 1px;
 }
 
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+
+
+/* Main wrapper for the two sides */
+.conference-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px;
+    align-items: flex-start; /* Keeps columns aligned at the top */
+}
+
+/* Individual side columns */
+.conference-column {
+    flex: 1; /* Makes both sides equal width */
+    border-radius: 15px;
+    padding: 15px;
+    min-height: 80vh;
+}
+
+.east-side {
+    background-color: #8A2BE2; /* BlueViolet */
+    /* If you want a softer violet, use #E0B0FF (Mauve) or #D8BFD8 (Thistle) */
+}
+
+/* Western Conference - Red */
+.west-side {
+    background-color: #FF0000; /* Pure Red */
+    /* If you want a softer red, use #FF6666 or #FFCCCC */
+}
+
+
+/* The hover text styling */
+.team-card:hover::after {
+    content: attr(data-hover); /* Pulls the text from the data-hover attribute */
+    position: absolute;
+    top: 110%; /* Positions it below the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none; /* Prevents the tooltip from flickering */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+
+.teams-grid a {
+    text-decoration: none !important; /* Removes underline */
+    color: inherit !important;           /* Forces text to stay white/inherit */
+}
+
+.teams-grid a:visited {
+    color: inherit !important;           /* Prevents the purple color */
+}
+
+.teams-grid a:hover {
+    color: inherit !important;           /* Keeps color consistent on hover */
+}
