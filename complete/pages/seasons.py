@@ -67,7 +67,7 @@ layout = html.Div(
 		    children=[
 			    dcc.Link(
 			        f"{year}-{str(year+1)[2:]}", 
-			        href=f"/seasons/{year}-{str(year+1)[2:]}",
+			        href=f"/seasons/{year}",
 			        className="season-button"
 			    ) for year in years
 			]
