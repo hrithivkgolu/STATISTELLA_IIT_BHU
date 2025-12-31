@@ -442,3 +442,56 @@ html, body {
 #player-roster-output {
     min-height: 200px;
 }
+
+
+/* ---------- SEASONS PAGE ---------- */
+
+.seasons-page {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95); /* 95% black */
+    padding: 40px 60px;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Page title */
+.seasons-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+
+.season-grid {
+    display: grid;
+    /* This creates the equal spacing and responsive rows */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The buttons themselves */
+.season-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #1d428a; /* NBA Blue */
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.season-button:hover {
+    background-color: #c8102e; /* NBA Red */
+    transform: scale(1.05); /* Slight pop-out effect */
+}
+
+
+
