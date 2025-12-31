@@ -14,6 +14,10 @@ nba_teams = {
 layout = html.Div(
     className="teams-page",
     children=[
+        html.Div(className="nav-header", children=[
+            dcc.Link("← BACK TO HOME", href="/", className="back-button"),
+            html.Span("NBA / TEAMS", className="breadcrumb")
+        ]),
         html.H1("NBA TEAMS", className="teams-title", style={'textAlign': 'center'}),
         
         # Main container to hold both columns

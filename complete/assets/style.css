@@ -5,6 +5,45 @@ html, body {
 }
 
 
+/* -------Navigation Header Bar---------- */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; /* Space before the logo starts */
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Back Button */
+.back-button {
+    text-decoration: none;
+    color: var(--accent-cyan);
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: rgba(34, 211, 238, 0.05); /* Very subtle cyan tint */
+}
+
+.back-button:hover {
+    background: rgba(34, 211, 238, 0.2);
+    transform: translateX(-5px); /* Moves slightly left on hover */
+    color: white;
+}
+
+.breadcrumb {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+
+/* -------Home---------- */
 .home-wrapper {
     position: relative;
     width: 100%;
@@ -203,4 +242,203 @@ html, body {
 
 .teams-grid a:hover {
     color: inherit !important;           /* Keeps color consistent on hover */
+}
+
+
+
+/* -----teamdetails pages------ */
+.team-detail-page {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95); /* Matches your home page */
+    padding: 60px 10%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Big Title at the very top */
+.detail-title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+/* Header Section: Logo | Name | Dropdown */
+.detail-header {
+    display: flex;
+    align-items: center; /* Vertically centers the logo and text */
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+/* The Big Logo */
+.big-team-logo {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+/* Name and Abbreviation Stack */
+.name-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-full-name {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.detail-abbr {
+    font-size: 1.8rem;
+    color: #8A2BE2; /* Violet accent - change to #FF0000 for West if desired */
+    font-weight: 300;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+/* Dropdown styling to push it to the right */
+.detail-dropdown {
+    margin-left: auto;
+    width: 300px;
+    color: black; /* Text inside the dropdown must be black to be readable */
+}
+
+/* Info Section (Nickname, Manager, Arena) */
+.info-section {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 5px solid #8A2BE2;
+}
+
+.info-section p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.info-section strong {
+    color: #8A2BE2; /* Violet for the labels */
+    width: 200px; /* Aligns all the values vertically */
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .detail-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .detail-dropdown {
+        margin-left: 0;
+        width: 100%;
+    }
+    .big-team-logo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Decorative Divider */
+.custom-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(138, 43, 226, 0.75), rgba(255, 255, 255, 0));
+    margin: 40px 0;
+}
+
+.roster-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Roster Grid */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Player Card */
+.player-card {
+    background: rgba(255, 255, 255, 0.05);
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    background: rgba(138, 43, 226, 0.2); /* Violet glow */
+    transform: translateY(-5px);
+    border-color: #8A2BE2;
+}
+
+.player-num {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.2); /* Big faded number */
+    margin-right: 20px;
+}
+
+.player-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.player-pos {
+    font-size: 0.9rem;
+    color: #8A2BE2; /* Violet accent */
+    text-transform: uppercase;
+}
+
+/* Container for the Roster Title and Search Bar */
+.roster-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Search Bar Styling */
+.player-search-bar {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(138, 43, 226, 0.5); /* Violet border */
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: white;
+    width: 300px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.player-search-bar:focus {
+    border-color: #8A2BE2;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+
+/* Ensure the output grid stays correctly spaced */
+#player-roster-output {
+    min-height: 200px;
 }
