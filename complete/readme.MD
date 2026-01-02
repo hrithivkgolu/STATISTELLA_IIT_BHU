@@ -17,4 +17,8 @@
 
 
 # Alternative 
-**you could visit the link [`statistella-iit-bhu-1.onrender.com`](statistella-iit-bhu-1.onrender.com)
+## you could visit the link [`statistella-iit-bhu-1.onrender.com`](statistella-iit-bhu-1.onrender.com)
+
+
+# The source code of this project is on github
+## ['GITHUB'](https://github.com/hrithivkgolu/STATISTELLA_IIT_BHU/)
