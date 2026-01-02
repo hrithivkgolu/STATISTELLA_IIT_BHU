@@ -15,7 +15,7 @@ app.layout = html.Div([
             html.Div(className="footer-names", children=[
                 html.Span("Hrithivk Rajbhar"),
                 html.Span("Sumit Kumar"),
-                html.Span("Tejaswani Kanpur"),
+                html.Span("Tejaswi Kanupuri"),
                 html.Span("Shivani Parihar"),
             ]),
             html.P("TEAM: QUAD(ISc BHU)", className="footer-label"),
